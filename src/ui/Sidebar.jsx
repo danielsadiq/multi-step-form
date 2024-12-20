@@ -1,9 +1,9 @@
 function Sidebar() {
-    return (
-        <div>
-            <img src="./bg-sidebar-desktop.svg"/>
-        </div>
-    )
+  return (
+    <div className="bg-[url('./bg-sidebar-mobile.svg')]">
+      {/* <img src="./bg-sidebar-mobile.svg" className="w-full" /> */}
+    </div>
+  );
 }
 
-export default Sidebar
+export default Sidebar;
