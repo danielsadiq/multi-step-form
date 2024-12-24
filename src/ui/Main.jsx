@@ -6,13 +6,16 @@ function Main() {
   function onSubmit(data){
     console.log(data);
   }
+  function onError(errors){
+    console.log(errors);
+  }
   return (
     <div className="text-left p-4">
       <h2 className="text-xl font-bold text-marineblue">Personal info</h2>
       <p className="text-coolGray">
         Please provide your name, email address, and phone number.
       </p>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit, onError)}>
         <FormRow name={"Name"} placeholder={"e.g. Stephen King"} register={register} />
         <FormRow
           name={"Email Address"}
