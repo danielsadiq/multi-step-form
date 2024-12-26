@@ -1,10 +1,12 @@
 import Sidebar from "./Sidebar";
-import Main from './Main';
+import { Outlet } from "react-router-dom";
 
 function AppLayout() {
   return <div className="block md:grid grid-cols-[20rem_1fr] md:gap-24">
 		<Sidebar/>
-		<Main/>
+		<div>
+			<Outlet/>
+		</div>
 	</div>;
 }
 

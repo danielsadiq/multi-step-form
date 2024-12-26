@@ -1,12 +1,16 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import "./App.css";
 
 import AppLayout from "./ui/AppLayout/";
+import Form from "./ui/Form";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<AppLayout />}></Route>
+        <Route element={<AppLayout />}>
+          <Route index element={<Navigate replace to="form"/>}/>
+          <Route path="form" element={<Form/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   );

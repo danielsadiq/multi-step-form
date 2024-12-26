@@ -1,7 +1,7 @@
 import FormRow from "./FormRow";
 import { useForm } from "react-hook-form";
 
-function Main() {
+function Form() {
   const {
     register,
     handleSubmit,
@@ -47,4 +47,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Form;
