@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router";
 import FormRow from "./FormRow";
 import { useForm } from "react-hook-form";
 
@@ -7,8 +8,10 @@ function Form() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const navigate = useNavigate();
   function onSubmit(data) {
     console.log(data);
+    navigate('/plan');
   }
   function onError(error) {
     console.log(error);
@@ -16,7 +19,7 @@ function Form() {
   }
   return (
     <div className="text-left p-4">
-      <h2 className="text-xl font-bold text-marineblue">Personal info</h2>
+      <h2 className="text-3xl font-bold text-marineblue">Personal info</h2>
       <p className="text-coolGray">
         Please provide your name, email address, and phone number.
       </p>

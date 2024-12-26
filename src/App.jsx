@@ -3,6 +3,7 @@ import "./App.css";
 
 import AppLayout from "./ui/AppLayout/";
 import Form from "./ui/Form";
+import Plan from "./pages/Plan";
 function App() {
   return (
     <BrowserRouter>
@@ -10,6 +11,7 @@ function App() {
         <Route element={<AppLayout />}>
           <Route index element={<Navigate replace to="form"/>}/>
           <Route path="form" element={<Form/>}/>
+          <Route path="plan" element={<Plan/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
