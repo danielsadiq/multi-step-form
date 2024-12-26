@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import FormRow from "./FormRow";
 import { useForm } from "react-hook-form";
+import NextButton from "./NextButton";
 
 function Form() {
   const {
@@ -42,9 +43,7 @@ function Form() {
           register={register}
           error={errors?.PhoneNumber?.message}
         />
-        <button className="px-4 py-2 bg-marineblue text-white float-right mt-4">
-          Next Step
-        </button>
+        <NextButton/>
       </form>
     </div>
   );

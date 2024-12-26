@@ -1,3 +1,5 @@
+import NextButton from "../ui/NextButton";
+
 /* eslint-disable react/prop-types */
 function Plan() {
   return (
@@ -10,6 +12,10 @@ function Plan() {
         <Card name={"Arcade"} amount={9} />
         <Card name={"Advanced"} amount={12} />
         <Card name={"Pro"} amount={15} />
+      </div>
+      <div>
+        <p></p>
+        <NextButton/>
       </div>
     </div>
   );
