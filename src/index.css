@@ -7,6 +7,11 @@
   --magnolia: hsl(217, 100%, 97%);
   --alabaster: hsl(231, 100%, 99%);
   --white: hsl(0, 0%, 100%);
+  --marineblue: hsl(213, 96%, 18%);
+  --purplishblue: hsl(243, 100%, 62%);
+  --pastelblue: hsl(228, 100%, 84%);
+  --lightblue: hsl(206, 94%, 87%);
+  --strawberryred: hsl(354, 84%, 57%);
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -60,6 +65,66 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--marineblue);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--marineblue);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--marineblue);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 @media (prefers-color-scheme: light) {
