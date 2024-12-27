@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 function Sidebar() {
   return (
-    <div className="relative bg-[url('./bg-sidebar-mobile.svg')] md:bg-[url('./bg-sidebar-desktop.svg')] bg-center bg-cover bg-no-repeat md:h-[90vh] rounded-xl">
-      <div className="flex md:block items-center text-center justify-evenly md:px-6 md:py-12 md:space-y-6">
+    <div className="relative bg-[url('./bg-sidebar-mobile.svg')] md:bg-[url('./bg-sidebar-desktop.svg')] bg-center bg-cover bg-no-repeat md:h-[90vh] md:rounded-xl h-[172px]">
+      <div className="flex md:block items-center text-center justify-evenly md:px-6 md:py-12 md:space-y-6 pt-8 px-20">
         <Step num="1">Your Info</Step>
         <Step num="2">Select plan</Step>
         <Step num="3">Add-ons</Step>
