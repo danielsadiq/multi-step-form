@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import NextButton from "../ui/NextButton";
 import { NavLink } from "react-router";
 
@@ -6,6 +7,7 @@ import { NavLink } from "react-router";
 function Plan() {
   const [active, setActive] = useState("false");
   const [monthly, setMonthly] = useState(true);
+  const navigate = useNavigate();
   console.log(monthly);
   
   const planList = [
@@ -43,7 +45,7 @@ function Plan() {
       </div>
       <div className="flex items-center justify-between mt-6">
         <NavLink className={"text-coolGray"}>Go Back</NavLink>
-        <NextButton />
+        <NextButton onClick={()=>navigate("/addons")} />
       </div>
     </div>
   );
